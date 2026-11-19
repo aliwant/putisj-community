@@ -1,0 +1,496 @@
+{
+  "appPack": "ai-adventure-pack",
+  "packVersion": 1,
+  "id": "starlight-live-pack",
+  "name": "星光直播间 · 全生态配置包",
+  "version": "1.2.0",
+  "author": "StarLive Studio",
+  "description": "星光直播间完整拓展配置包：一键部署夜色霓虹直播主题、主屏沉浸式直播间舞台（弹幕/PK进度/礼物连击/抢福袋/开播）、专属剧本与分层台账，以及小手机「星光直播」软件（选台/榜单/充值/打赏/PK连麦/自己开播）。",
+  "world": {
+    "id": "starlight_live_world",
+    "name": "星光直播间",
+    "description": "都市夜色直播风云：从榜一神豪到现象级主播，选台打赏、PK连麦、粉丝互动全由你主宰。",
+    "defaultPreset": "modern",
+    "themePreset": "cyber",
+    "system": "【基础世界观】\n这里是「星光直播（StarLive）」所在的霓虹不夜城。每到入夜，百万观众涌入各大分区直播间——星秀才艺、深夜电台、户外探秘、硬核游戏 PK 与顶流嘉年华大战轮番上演。\n\n规则与叙事要求：\n1. 根据玩家当前所在的直播间（或玩家自己开播的身份），以极强的临场感描写镜头画面、主播微表情、直播间公屏弹幕起哄、连麦火药味与全站礼物横幅播报。\n2. 严禁忽视小手机与直播台控中的实时数值：玩家余额（星钻）、VIP 贵族爵位、刚送出的礼物与连击、当前 PK 分差都会直接影响主播与水友的态度。\n3. 每次回复末尾给出 3~4 个以 \"> \" 开头的自然互动选项（如：发弹幕互动、连麦挑衅、继续刷礼物反超、切台探访其他主播等）。",
+    "intro": "深夜十一点二十分，手机屏幕在微暗的房间里亮起幽紫与霓虹青交织的光。\n\n你刚刚收到「星光直播」年度盛典预热推送，账户里静静躺着 **1,200 星钻** 与一枚闪亮的 **「星耀骑士」** 铭牌。此时首页热榜正刷屏：星秀区一姐「林汐」正在和老对手「K神」打关键局 PK，弹幕几乎把画面遮得严严实实；而深夜电台与户外探灵间也亮着醒目的「LIVE」红标。\n\n点开随身小手机里的 **「星光直播」**，即可直接切入直播间主屏舞台，挑房间、看榜单、充值、刷礼物甚至亲自开播。\n\n> 打开小手机「星光直播」，先挑一个心仪的直播间进去看看\n> 在公屏发一条弹幕试探主播和观众的反应\n> 先去充值中心看看今日福利，准备冲一波榜一",
+    "mandatoryDocs": [
+      {
+        "id": "rule_live_atmosphere",
+        "name": "直播间临场感与弹幕规则",
+        "kind": "constraint",
+        "enabled": true,
+        "content": "1. 回复中需自然穿插 2~4 条水友公屏弹幕反应（例如「[弹幕] 房管呢？快看榜一大哥进场了！」），营造真实热闹的直播氛围。\n2. 主播必须根据玩家刚送出的礼物、VIP 爵位、弹幕内容或当前 PK 分差给出有性格差异的即时口播回应，不能千篇一律。"
+      }
+    ],
+    "ledger": [
+      {
+        "id": "live_l1_intro",
+        "title": "第 1 层 · 盛典前夜与四大分区",
+        "category": "世界观",
+        "revealAt": 1,
+        "teaseAt": 0,
+        "tease": "",
+        "status": "active",
+        "source": "pack",
+        "content": "星光直播正在举办「午夜星辉周赛」。星秀区顶流「林汐」（温柔傲娇系歌姬）目前被对手「K神」压制着 PK 分数；游戏区技术主播「阿哲」正在单排冲分并接受水友整活悬赏；深夜情感电台「苏晚」只开微弱台灯讲都市怪谈与秘密心事；户外主播「老周」正举着稳定器独自夜探废弃旧剧场。"
+      },
+      {
+        "id": "live_l2_guild",
+        "title": "第 2 层 · 公会暗战与神秘赞助商",
+        "category": "势力",
+        "revealAt": 2,
+        "teaseAt": 1,
+        "tease": "公屏偶尔飘过“盛世公会”和“黑桃资本”的暗号弹幕，似乎后台并不太平。",
+        "status": "active",
+        "source": "pack",
+        "content": "星光平台背后由「盛世传媒」与「曜石娱乐」两家公会角力。林汐因拒绝签下严苛的分成续约而被暗中限流；如果你在关键 PK 中帮她保住周赛席位，她会在下播后私信向你吐露公会内幕。"
+      },
+      {
+        "id": "live_l3_rival",
+        "title": "第 3 层 · 神秘神豪“零点先生”的真实身份",
+        "category": "伏笔",
+        "revealAt": 3,
+        "teaseAt": 2,
+        "tease": "排行榜榜首始终挂着一个从不说话的空白头像账号“00:00”。",
+        "status": "active",
+        "source": "pack",
+        "content": "长期霸占星光总榜第一的「零点先生」其实是平台联合创始人兼风控测试账号，他专门在夜间巡场观察各区潜规则与真正有凝聚力的新星主播，若你在场表现出极高人气或策略操作，可能会引来他的私密邀约。"
+      }
+    ],
+    "initialKnowledge": {
+      "scene": {
+        "location": "星光直播 · 首页大厅",
+        "time": "深夜 23:20 · 午夜周赛时段",
+        "weather": "屏幕霓虹闪烁 · 弹幕翻涌",
+        "summary": "你登录星光直播平台，准备挑选直播间、打赏冲榜或开启自己的直播。"
+      },
+      "stats": [
+        {
+          "id": "st_diamonds",
+          "name": "星钻",
+          "value": 1200,
+          "max": "",
+          "unit": "钻",
+          "note": "直播间打赏通用货币"
+        },
+        {
+          "id": "st_gold",
+          "name": "金币",
+          "value": 3000,
+          "max": "",
+          "unit": "G",
+          "note": "可用小手机兑换为星钻"
+        },
+        {
+          "id": "st_charm",
+          "name": "全站影响力",
+          "value": 32,
+          "max": 100,
+          "unit": "",
+          "note": "星耀骑士 Lv.12"
+        },
+        {
+          "id": "st_energy",
+          "name": "熬夜精力",
+          "value": 92,
+          "max": 100,
+          "unit": "",
+          "note": "精神亢奋"
+        }
+      ],
+      "inventory": [
+        {
+          "id": "inv_badge",
+          "name": "星耀骑士铭牌",
+          "qty": 1,
+          "desc": "进入任意直播间自动触发金色流光进场播报"
+        },
+        {
+          "id": "inv_coupon",
+          "name": "首充双倍星钻券",
+          "qty": 1,
+          "desc": "在小手机充值中心首次充值时可享额外返利"
+        },
+        {
+          "id": "inv_horn",
+          "name": "全服超级喇叭",
+          "qty": 2,
+          "desc": "可向平台所有直播间发送金色置顶喊话"
+        }
+      ],
+      "npcs": [
+        {
+          "id": "npc_linxi",
+          "name": "林汐",
+          "role": "星秀顶流歌姬 · Room 101",
+          "relation": "友善（关注中）",
+          "status": "正在直播演唱 / PK战",
+          "note": "嗓音清澈带一点倔强，最近正被公会暗中施压"
+        },
+        {
+          "id": "npc_suwan",
+          "name": "苏晚",
+          "role": "深夜电台主播 · Room 204",
+          "relation": "温和（初识）",
+          "status": "正在连线听众读信",
+          "note": "知性神秘，似乎掌握城市不少隐秘风闻"
+        },
+        {
+          "id": "npc_azhe",
+          "name": "阿哲",
+          "role": "高能游戏主播 · Room 308",
+          "relation": "爽朗（围观）",
+          "status": "双排冲分整活中",
+          "note": "技术过硬但嘴硬心软，最吃礼物激将法"
+        },
+        {
+          "id": "npc_laozhou",
+          "name": "老周",
+          "role": "午夜户外探险 · Room 404",
+          "relation": "中立（在线）",
+          "status": "夜探旧城废弃剧场",
+          "note": "胆大心细，直播间常常突然发生诡异异响"
+        }
+      ],
+      "quests": [
+        {
+          "id": "q_live_1",
+          "title": "挑一个直播间进场并留下你的第一波存在感",
+          "status": "active",
+          "note": "打开小手机「星光直播」即可一键进入主屏直播舞台"
+        },
+        {
+          "id": "q_live_2",
+          "title": "在「星光贡献榜」中冲进前 3 名",
+          "status": "active",
+          "note": "给心仪主播送出礼物或参与 PK 助威即可迅速涨榜"
+        }
+      ],
+      "facts": [
+        "你以「星耀骑士」身份登录了星光直播（StarLive），账户初始拥有 1200 星钻"
+      ]
+    }
+  },
+  "theme": {
+    "preset": "cyber",
+    "accent": "#ff2e97",
+    "font": "sans",
+    "cardStyle": "glass",
+    "cssVars": {
+      "--bg": "#090614",
+      "--body-bg": "radial-gradient(920px 460px at 16% -6%, rgba(255,46,151,.22) 0%, transparent 56%), radial-gradient(780px 440px at 88% 12%, rgba(0,229,255,.18) 0%, transparent 52%), linear-gradient(180deg, #070412 0%, #120926 100%) fixed",
+      "--panel": "#150e29",
+      "--panel2": "#1f153b",
+      "--panel3": "#100a21",
+      "--input-bg": "#0b0718",
+      "--line": "#32225a",
+      "--line2": "#50358f",
+      "--text": "#f3ebff",
+      "--text-strong": "#ffffff",
+      "--muted": "#b29ed9",
+      "--accent": "#ff2e97",
+      "--accent-hover": "#e01a7d",
+      "--accent-soft": "rgba(255,46,151,.18)",
+      "--header-bg": "linear-gradient(180deg, #1b1036 0%, #100822 100%)",
+      "--header-border": "#ff2e97",
+      "--user-bg": "#2b1445",
+      "--user-border": "#9b4dff",
+      "--opt-bg": "#1e143a",
+      "--opt-border": "#6035ab",
+      "--opt-text": "#6ef7ea",
+      "--opt-hover-bg": "#2d1c56",
+      "--hud-border": "#ff2e97",
+      "--hud-trim2": "#00e5ff"
+    },
+    "customCss": ".live-stage-banner{box-shadow:0 8px 32px rgba(255,46,151,.22),inset 0 0 0 1px rgba(0,229,255,.22)!important;}",
+    "phoneTheme": {
+      "style": "cyber",
+      "shell": "cobalt"
+    }
+  },
+  "uiStage": {
+    "mode": "livestream",
+    "autoEnter": true,
+    "exitLabel": "退出直播间 · 切回手账",
+    "stageConfig": {
+      "platformName": "星光直播 StarLive",
+      "currencyName": "星钻",
+      "currencyStatName": "星钻",
+      "goldStatName": "金币",
+      "userProfile": {
+        "nickname": "星夜旅人",
+        "level": 12,
+        "vipTitle": "星耀骑士",
+        "vipExp": 1200,
+        "diamonds": 1200
+      },
+      "rooms": [
+        {
+          "id": "room_101",
+          "roomNo": "101",
+          "title": "【周赛冲榜】深夜清唱 & PK守护战！不赢不下播",
+          "streamer": "林汐",
+          "category": "星秀才艺",
+          "viewers": 128400,
+          "heat": 94500,
+          "fanLevel": 4,
+          "fanName": "汐光团",
+          "followed": true,
+          "tag": "PK热战中",
+          "avatarColor": "linear-gradient(135deg,#ff2e97,#a855f7)",
+          "bio": "星秀区人气歌姬，擅长治愈民谣与高音爆发，性格外表傲娇其实超宠榜上水友。",
+          "pk": {
+            "active": true,
+            "rivalName": "K神 · 潮音社",
+            "rivalScore": 48200,
+            "myScore": 46500,
+            "secondsLeft": 180
+          },
+          "seedDanmaku": [
+            "欢迎星耀骑士「星夜旅人」闪耀进入直播间！",
+            "还差 1700 分就反超 K 神了！",
+            "汐汐今晚状态绝了，高音太稳了"
+          ]
+        },
+        {
+          "id": "room_204",
+          "roomNo": "204",
+          "title": "【午夜树洞】城市未眠电台 · 分享一个不为人知的秘密",
+          "streamer": "苏晚",
+          "category": "深夜电台",
+          "viewers": 43600,
+          "heat": 38900,
+          "fanLevel": 1,
+          "fanName": "晚风集",
+          "followed": false,
+          "tag": "微醺治愈",
+          "avatarColor": "linear-gradient(135deg,#6366f1,#38bdf8)",
+          "bio": "只在深夜开播的知性电台主理人，声音像温热红茶，似乎掌握全城不少隐秘线报。",
+          "pk": {
+            "active": false,
+            "rivalName": "",
+            "rivalScore": 0,
+            "myScore": 0,
+            "secondsLeft": 0
+          },
+          "seedDanmaku": [
+            "晚姐的声音一出来瞬间不焦虑了",
+            "听说盛世公会那边今晚有大动作？",
+            "有人点播《夜航船》吗"
+          ]
+        },
+        {
+          "id": "room_308",
+          "roomNo": "308",
+          "title": "【巅峰赛冲分】这把再输我倒立喝可乐！水友上号车",
+          "streamer": "阿哲",
+          "category": "游戏竞技",
+          "viewers": 87200,
+          "heat": 67400,
+          "fanLevel": 2,
+          "fanName": "哲家军",
+          "followed": false,
+          "tag": "高能操作",
+          "avatarColor": "linear-gradient(135deg,#06b6d4,#10b981)",
+          "bio": "操作凶悍的硬核技术主播，口癖“这波我必秀”，刷大礼物能直接点单指定英雄或挑战。",
+          "pk": {
+            "active": false,
+            "rivalName": "",
+            "rivalScore": 0,
+            "myScore": 0,
+            "secondsLeft": 0
+          },
+          "seedDanmaku": [
+            "哈哈哈立flag了，截图留证",
+            "哲哥来把刺客打野！",
+            "谁刷个跑车让他换纯输出装"
+          ]
+        },
+        {
+          "id": "room_404",
+          "roomNo": "404",
+          "title": "【午夜探秘】独闯废弃旧城大剧院，地下室似乎有声音",
+          "streamer": "老周",
+          "category": "户外探险",
+          "viewers": 65900,
+          "heat": 59200,
+          "fanLevel": 1,
+          "fanName": "夜行灯",
+          "followed": false,
+          "tag": "高能预警",
+          "avatarColor": "linear-gradient(135deg,#f59e0b,#dc2626)",
+          "bio": "手持夜视仪与红外热成像仪的硬核户外探险主播，经常在直播间拍到难以解释的画面。",
+          "pk": {
+            "active": false,
+            "rivalName": "",
+            "rivalScore": 0,
+            "myScore": 0,
+            "secondsLeft": 0
+          },
+          "seedDanmaku": [
+            "刚才二楼走廊栏杆是不是动了一下？？",
+            "老周快看你身后反光！",
+            "刷个火箭给老周壮壮胆！"
+          ]
+        }
+      ],
+      "gifts": [
+        {
+          "id": "g_heart",
+          "name": "小心心",
+          "price": 1,
+          "heat": 10,
+          "icon": "❤",
+          "tier": "basic",
+          "effect": "飘起粉色爱心"
+        },
+        {
+          "id": "g_glow",
+          "name": "应援荧光棒",
+          "price": 10,
+          "heat": 120,
+          "icon": "✦",
+          "tier": "basic",
+          "effect": "全场挥舞荧光海"
+        },
+        {
+          "id": "g_rose",
+          "name": "星空玫瑰",
+          "price": 52,
+          "heat": 650,
+          "icon": "✿",
+          "tier": "mid",
+          "effect": "漫天星光花瓣雨"
+        },
+        {
+          "id": "g_tea",
+          "name": "深夜热奶茶",
+          "price": 99,
+          "heat": 1200,
+          "icon": "☕",
+          "tier": "mid",
+          "effect": "贴心投喂特效"
+        },
+        {
+          "id": "g_car",
+          "name": "霓虹超跑",
+          "price": 520,
+          "heat": 6800,
+          "icon": "⚡",
+          "tier": "rare",
+          "effect": "流光跑车漂移进场"
+        },
+        {
+          "id": "g_yacht",
+          "name": "星海游轮",
+          "price": 1314,
+          "heat": 18000,
+          "icon": "⛵",
+          "tier": "rare",
+          "effect": "全屏星海浪潮"
+        },
+        {
+          "id": "g_rocket",
+          "name": "破晓火箭",
+          "price": 2888,
+          "heat": 42000,
+          "icon": "▲",
+          "tier": "epic",
+          "effect": "跨区全站火箭升空播报"
+        },
+        {
+          "id": "g_carnival",
+          "name": "星空嘉年华",
+          "price": 5200,
+          "heat": 85000,
+          "icon": "♛",
+          "tier": "legend",
+          "effect": "全平台置顶横幅 · 璀璨摩天轮降临"
+        }
+      ],
+      "rechargePlans": [
+        {
+          "id": "rc_6",
+          "rmb": 6,
+          "diamonds": 60,
+          "bonus": 10,
+          "label": "尝鲜小充"
+        },
+        {
+          "id": "rc_30",
+          "rmb": 30,
+          "diamonds": 300,
+          "bonus": 45,
+          "label": "骑士补给"
+        },
+        {
+          "id": "rc_98",
+          "rmb": 98,
+          "diamonds": 980,
+          "bonus": 180,
+          "label": "热战精选"
+        },
+        {
+          "id": "rc_328",
+          "rmb": 328,
+          "diamonds": 3280,
+          "bonus": 680,
+          "label": "公爵尊享"
+        },
+        {
+          "id": "rc_648",
+          "rmb": 648,
+          "diamonds": 6480,
+          "bonus": 1680,
+          "label": "帝皇满仓"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "零点先生 00:00",
+          "title": "至尊帝皇",
+          "score": 186400,
+          "isUser": false
+        },
+        {
+          "name": "晚安小熊",
+          "title": "荣耀公爵",
+          "score": 42800,
+          "isUser": false
+        },
+        {
+          "name": "霓虹旧梦",
+          "title": "璀璨伯爵",
+          "score": 19500,
+          "isUser": false
+        },
+        {
+          "name": "星夜旅人 (你)",
+          "title": "星耀骑士",
+          "score": 3200,
+          "isUser": true
+        },
+        {
+          "name": "路过的打工人",
+          "title": "白银守卫",
+          "score": 980,
+          "isUser": false
+        }
+      ]
+    }
+  },
+  "phoneApps": [
+    {
+      "id": "livestream",
+      "label": "星光直播",
+      "icon": "live",
+      "gradient": "linear-gradient(145deg, #ff2e97, #7c3aed)",
+      "appType": "livestream",
+      "entersMainStage": true
+    }
+  ],
+  "promptHooks": {
+    "injectStageState": true
+  }
+}
